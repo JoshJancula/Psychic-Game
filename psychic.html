@@ -52,13 +52,14 @@
       // If user guessed the computer letter then tell
       // them and reset for next round
 
-    if (userGuess === computerLetter) {
-      wins++;
-      html += "<p>You guessed " + computerLetter +
-      " with " + guessesLeft + " guesses left!</p>" +
-      "<p>Hey champ, play again</p>";
-      resetGame();
-    }
+      if (userGuess === computerLetter) {
+        wins++;
+        alert("You guessed " + computerLetter +
+          " with " + guessesLeft + " guesses left! " +
+          "Play again");
+        resetGame();
+      }
+
 
     // User failed to guess, if they're out of tries
     // then tell them and reset for next round
@@ -67,9 +68,8 @@
       guessesLeft--;
       if (guessesLeft === 0) {
         losses++;
-        html += "<p>You lost!</p>" +
-        "<p>The computer was thinking of: " + computerLetter + "</p>" +
-        "<p>Hey loser, play again</p>";
+        alert("You lost! " +
+          "The computer was thinking of: " + computerLetter);
         resetGame();
       }
 
